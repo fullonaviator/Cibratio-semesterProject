@@ -8,7 +8,11 @@
 
 import UIKit
 
-class VehicleListController: UIViewController {
+class VehicleListController: UITableViewController {
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return DataStore.shared.cars.count
+    }
     
     
 }

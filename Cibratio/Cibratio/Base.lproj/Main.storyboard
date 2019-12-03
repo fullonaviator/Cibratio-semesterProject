@@ -254,7 +254,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSl-FB-aGS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1211.5942028985507" y="-445.3125"/>
+            <point key="canvasLocation" x="1316" y="-445"/>
         </scene>
         <!--Add Vehicle Controller-->
         <scene sceneID="csg-0F-0gJ">
@@ -293,13 +293,76 @@
                     <view key="view" contentMode="scaleToFill" id="zT1-Eb-IxM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average MPG:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcG-t5-4J2">
+                                <rect key="frame" x="20" y="174" width="108.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KeP-64-ZSg">
+                                <rect key="frame" x="100" y="760" width="214" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31.6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T96-cF-3oY">
+                                <rect key="frame" x="141.5" y="221" width="131" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="31.6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfu-oY-bje">
+                                <rect key="frame" x="68" y="463" width="278" height="128"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EPA Estimate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MxX-3I-gJc">
+                                <rect key="frame" x="20" y="434" width="101" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="T96-cF-3oY" firstAttribute="centerX" secondItem="h9p-ID-RmY" secondAttribute="centerX" id="40S-db-fEV"/>
+                            <constraint firstItem="KeP-64-ZSg" firstAttribute="top" secondItem="Qfu-oY-bje" secondAttribute="bottom" constant="169" id="4wy-qP-Z0G"/>
+                            <constraint firstItem="h9p-ID-RmY" firstAttribute="trailing" secondItem="KeP-64-ZSg" secondAttribute="trailing" constant="100" id="Ce2-dP-PG0"/>
+                            <constraint firstItem="MxX-3I-gJc" firstAttribute="leading" secondItem="h9p-ID-RmY" secondAttribute="leading" constant="20" id="KX7-tP-4eK"/>
+                            <constraint firstItem="MxX-3I-gJc" firstAttribute="top" secondItem="T96-cF-3oY" secondAttribute="bottom" constant="129" id="NDn-5e-nTk"/>
+                            <constraint firstItem="h9p-ID-RmY" firstAttribute="trailing" secondItem="WcG-t5-4J2" secondAttribute="trailing" constant="285.5" id="VaN-5Z-Xyk"/>
+                            <constraint firstItem="Qfu-oY-bje" firstAttribute="centerX" secondItem="h9p-ID-RmY" secondAttribute="centerX" id="Yg1-c0-jJY"/>
+                            <constraint firstItem="Qfu-oY-bje" firstAttribute="top" secondItem="MxX-3I-gJc" secondAttribute="bottom" constant="8.5" id="bcY-bn-Vd1"/>
+                            <constraint firstItem="WcG-t5-4J2" firstAttribute="top" secondItem="h9p-ID-RmY" secondAttribute="top" constant="86" id="eWN-bX-zSi"/>
+                            <constraint firstItem="KeP-64-ZSg" firstAttribute="leading" secondItem="h9p-ID-RmY" secondAttribute="leading" constant="100" id="gS9-HR-nuK"/>
+                            <constraint firstItem="WcG-t5-4J2" firstAttribute="leading" secondItem="h9p-ID-RmY" secondAttribute="leading" constant="20" id="gpX-94-DTV"/>
+                            <constraint firstItem="T96-cF-3oY" firstAttribute="top" secondItem="WcG-t5-4J2" secondAttribute="bottom" constant="26" id="t7u-Ys-PBf"/>
+                            <constraint firstItem="h9p-ID-RmY" firstAttribute="trailing" secondItem="MxX-3I-gJc" secondAttribute="trailing" constant="293" id="vwR-DC-D8X"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="h9p-ID-RmY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sHG-yV-CWA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2984.057971014493" y="-121.20535714285714"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FXx-SX-igf">
+            <objects>
+                <viewController id="KTU-qp-lRS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ojt-4x-7qG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7Nu-b2-QZB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TLi-Zi-dL0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3668" y="-125"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ETw-im-cbE">
@@ -336,7 +399,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEY-pn-hqn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="373.91304347826087" y="-445.3125"/>
+            <point key="canvasLocation" x="335" y="-445"/>
         </scene>
         <!--Calculate-->
         <scene sceneID="PVd-9H-tUQ">
@@ -359,6 +422,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="94u-FG-DfU"/>
+        <segue reference="BYE-2s-efZ"/>
     </inferredMetricsTieBreakers>
 </document>
