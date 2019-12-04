@@ -10,11 +10,5 @@ import UIKit
 
 class AddVehicleController: UIViewController {
     
-    @IBAction func cancelVehicleButton(_ sender: Any) {
-    }
-    
-    @IBAction func addVehicleButton(_ sender: Any) {
-    }
-    
     
 }

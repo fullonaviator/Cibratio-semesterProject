@@ -264,27 +264,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcg-PJ-Uip">
-                                <rect key="frame" x="20" y="750" width="170" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <segue destination="QAu-gY-owm" kind="show" id="94u-FG-DfU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qna-xX-HVs">
-                                <rect key="frame" x="224" y="750" width="170" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sdu-DP-Yuq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="700"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="700" id="NMU-Mq-AYz"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="V6o-gC-hna">
+                                <rect key="frame" x="0.0" y="752" width="414" height="110"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sdu-DP-Yuq" firstAttribute="leading" secondItem="KFZ-RR-mLX" secondAttribute="leading" id="Bth-ng-ivl"/>
+                            <constraint firstItem="V6o-gC-hna" firstAttribute="trailing" secondItem="KFZ-RR-mLX" secondAttribute="trailing" id="XBE-bD-zuN"/>
+                            <constraint firstItem="V6o-gC-hna" firstAttribute="top" secondItem="sdu-DP-Yuq" secondAttribute="bottom" constant="8" id="e7s-ke-zZY"/>
+                            <constraint firstItem="sdu-DP-Yuq" firstAttribute="top" secondItem="KFZ-RR-mLX" secondAttribute="top" id="fo7-Kb-OKR"/>
+                            <constraint firstItem="V6o-gC-hna" firstAttribute="bottom" secondItem="KFZ-RR-mLX" secondAttribute="bottom" id="nlb-x2-9r4"/>
+                            <constraint firstItem="V6o-gC-hna" firstAttribute="leading" secondItem="KFZ-RR-mLX" secondAttribute="leading" id="tZ5-g8-cZF"/>
+                            <constraint firstItem="KFZ-RR-mLX" firstAttribute="trailing" secondItem="sdu-DP-Yuq" secondAttribute="trailing" id="xti-ru-9Zh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="KFZ-RR-mLX"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OI5-Wc-RRl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2984" y="-859"/>
+            <point key="canvasLocation" x="2982.608695652174" y="-859.15178571428567"/>
         </scene>
         <!--Vehicle Controller-->
         <scene sceneID="Q5N-s4-BdB">
@@ -421,7 +426,4 @@
             <point key="canvasLocation" x="374" y="386"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="BYE-2s-efZ"/>
-    </inferredMetricsTieBreakers>
 </document>
