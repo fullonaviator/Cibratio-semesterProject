@@ -10,9 +10,9 @@ import UIKit
 
 class VehicleListController: UITableViewController {
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DataStore.shared.cars.count
-    }
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return DataStore.shared.cars.count
+//    }
     
     
 }
