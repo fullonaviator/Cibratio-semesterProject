@@ -13,6 +13,18 @@ class DataStore {
     static let shared = DataStore()
     
     var cars: [Car] = []
+    var entry: [MpgEntry] = []
+    
+    var tempCalcMPG: Double = 0
+    
+    
+
+    
+    
+    
+    
+    
+    
     
     
 }

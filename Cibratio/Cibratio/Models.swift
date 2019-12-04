@@ -11,13 +11,17 @@ import Foundation
 struct Car {
     var make: String
     var model: String
-    var year: Int
-    var entries: [MpgEntry] = []
+    var year: String
+    var entries: [MpgEntry]? = []
     
 }
 
 struct MpgEntry {
-    var mpg: Double
-    var date: Date
+    var mpg: Double?
+    var date: Date?
     
+}
+
+struct tempMPG {
+    var tempCalcMPG: Double
 }

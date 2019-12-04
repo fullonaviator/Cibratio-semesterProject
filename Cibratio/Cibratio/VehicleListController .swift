@@ -8,11 +8,20 @@
 
 import UIKit
 
-class VehicleListController: UITableViewController {
+class VehicleListController: UIViewController, UITableViewDelegate  {
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DataStore.shared.cars.count
+    var vehicleDataSource =  VehicleDataSource()
+    
+    @IBOutlet var tableView: UITableView!
+    
+    var newEntry1 = MpgEntry(mpg: 30.0, date: Date())
+
+   
+    
+    override func viewDidLoad() {
+        
+        tableView.dataSource = vehicleDataSource
+        tableView.delegate = self
     }
-    
     
 }

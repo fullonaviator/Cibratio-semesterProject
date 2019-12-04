@@ -10,4 +10,17 @@ import UIKit
 
 class VehicleController: UIViewController {
     
+    var mpgEntry = DataStore.shared.entry[0]
+    
+    @IBOutlet weak var avgMPGLabel: UILabel!
+    @IBOutlet weak var epaMPGLabel: UILabel!
+    
+    func setLabels (){
+        
+        avgMPGLabel.text = "\(mpgEntry.mpg)"
+    }
+    
+    override func viewDidLoad() {
+        setLabels()
+    }
 }
