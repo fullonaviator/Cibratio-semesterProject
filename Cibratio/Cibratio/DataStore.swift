@@ -13,9 +13,14 @@ class DataStore {
     static let shared = DataStore()
     
     var cars: [Car] = []
-    var entry: [MpgEntry] = []
+    var entry: [[MpgEntry]] = []
     
     var tempCalcMPG: Double = 0
+    
+    var addedIndexPath: Int = 0 
+    var latestIndexPath: Int = 0
+    var selectedVehicleIndexPath: Int = 0
+    
     
     
 

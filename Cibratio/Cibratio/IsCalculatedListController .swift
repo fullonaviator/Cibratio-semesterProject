@@ -8,18 +8,74 @@
 
 import UIKit
 
-class IsCalculatedListController: UIViewController, UITableViewDelegate {
+class IsCalculatedListController: UITableViewController {
     
-    @IBOutlet var tableView: UITableView!
     
-    var isCalculatedDataSource = IsCalculatedDataSource()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.dataSource = isCalculatedDataSource
+        tableView.dataSource = self
         tableView.delegate = self
     }
+    
+    var dataStore = DataStore.shared
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let car = DataStore.shared.cars[dataStore.selectedVehicleIndexPath]
+        
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "labelsCell") as! LabelsCell
+            cell.avgMPGLabel.text? = "\(dataStore.tempCalcMPG)"
+            cell.epaEstimateCell.text? = "\(30.1)"
+            return cell
+        }
+        else if indexPath.row == 1 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "vehicleSelectionCell") as! VehicleSelectionCell
+            cell.textLabel!.text = car.year + " " + car.make + " " + car.model
+            
+            
+            return cell
+        }
+        else {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "buttonsCell") as! ButtonsCell
+            cell.backButton((Any).self)
+            cell.submitButton((Any).self)
+            cell.delegate = self
+            
+            return cell
+        }
+    }
+    
+}
+
+extension IsCalculatedListController: ButtonCellDelagate {
+    
+    func didTapSubmitButton() {
+        
+        let indexPath = DataStore.shared.selectedVehicleIndexPath
+        
+        let newEntry = MpgEntry(mpg: dataStore.tempCalcMPG, date: Date())
+        dataStore.cars[indexPath].entries?.append(newEntry)
+        
+}
+    
+    func didTapBackButton() {
+        return
+    }
+    
 }
 
 

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Car {
+struct Car: Codable {
     var make: String
     var model: String
     var year: String
@@ -16,7 +16,7 @@ struct Car {
     
 }
 
-struct MpgEntry {
+struct MpgEntry: Codable {
     var mpg: Double?
     var date: Date?
     

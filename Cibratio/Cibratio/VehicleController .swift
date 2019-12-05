@@ -10,17 +10,24 @@ import UIKit
 
 class VehicleController: UIViewController {
     
-    var mpgEntry = DataStore.shared.entry[0]
+    
+    
+    //var mpgEntry = DataStore.shared.entry[DataStore.shared.selectedVehicleIndexPath]
     
     @IBOutlet weak var avgMPGLabel: UILabel!
     @IBOutlet weak var epaMPGLabel: UILabel!
     
     func setLabels (){
         
-        avgMPGLabel.text = "\(mpgEntry.mpg)"
+        avgMPGLabel.text! = "\(DataStore.shared.tempCalcMPG)"
+        print("\(DataStore.shared.cars[DataStore.shared.selectedVehicleIndexPath].entries)")
+        
     }
     
-    override func viewDidLoad() {
+    override func viewWillAppear(_ animated: Bool) {
         setLabels()
     }
+    
+        
+
 }

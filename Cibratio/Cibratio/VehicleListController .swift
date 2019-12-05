@@ -17,11 +17,17 @@ class VehicleListController: UIViewController, UITableViewDelegate  {
     var newEntry1 = MpgEntry(mpg: 30.0, date: Date())
 
    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        DataStore.shared.latestIndexPath = indexPath.row
+    }
+    
     
     override func viewDidLoad() {
         
         tableView.dataSource = vehicleDataSource
         tableView.delegate = self
+        print(DataStore.shared.addedIndexPath)
     }
     
 }

@@ -23,6 +23,8 @@
 		D805696E23988E5B0053E2B2 /* VehicleSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D805696D23988E5B0053E2B2 /* VehicleSelectionCell.swift */; };
 		D805697023988EBE0053E2B2 /* ButtonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D805696F23988EBE0053E2B2 /* ButtonsCell.swift */; };
 		D80569722398909A0053E2B2 /* IsCalculatedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80569712398909A0053E2B2 /* IsCalculatedDataSource.swift */; };
+		D80569742398DDBD0053E2B2 /* SelectedVehicleListController .swift in Sources */ = {isa = PBXBuildFile; fileRef = D80569732398DDBD0053E2B2 /* SelectedVehicleListController .swift */; };
+		D80569762398DE190053E2B2 /* SelectedVehicleListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80569752398DE190053E2B2 /* SelectedVehicleListDataSource.swift */; };
 		D8403F8C2396A69900F22EC5 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8403F8B2396A69900F22EC5 /* Models.swift */; };
 		D8403F8E2396AABE00F22EC5 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8403F8D2396AABE00F22EC5 /* DataStore.swift */; };
 /* End PBXBuildFile section */
@@ -67,6 +69,8 @@
 		D805696D23988E5B0053E2B2 /* VehicleSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleSelectionCell.swift; sourceTree = "<group>"; };
 		D805696F23988EBE0053E2B2 /* ButtonsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsCell.swift; sourceTree = "<group>"; };
 		D80569712398909A0053E2B2 /* IsCalculatedDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsCalculatedDataSource.swift; sourceTree = "<group>"; };
+		D80569732398DDBD0053E2B2 /* SelectedVehicleListController .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectedVehicleListController .swift"; sourceTree = "<group>"; };
+		D80569752398DE190053E2B2 /* SelectedVehicleListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedVehicleListDataSource.swift; sourceTree = "<group>"; };
 		D8403F8B2396A69900F22EC5 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		D8403F8D2396AABE00F22EC5 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +137,8 @@
 				D80569712398909A0053E2B2 /* IsCalculatedDataSource.swift */,
 				D805696B23988E1E0053E2B2 /* LabelsCell.swift */,
 				D805696D23988E5B0053E2B2 /* VehicleSelectionCell.swift */,
+				D80569732398DDBD0053E2B2 /* SelectedVehicleListController .swift */,
+				D80569752398DE190053E2B2 /* SelectedVehicleListDataSource.swift */,
 				D805696F23988EBE0053E2B2 /* ButtonsCell.swift */,
 				D8403F8B2396A69900F22EC5 /* Models.swift */,
 				D8403F8D2396AABE00F22EC5 /* DataStore.swift */,
@@ -289,10 +295,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D80569742398DDBD0053E2B2 /* SelectedVehicleListController .swift in Sources */,
 				6424F21B2395906A004D6B32 /* AddVehicleController .swift in Sources */,
 				D8403F8E2396AABE00F22EC5 /* DataStore.swift in Sources */,
 				D805696C23988E1E0053E2B2 /* LabelsCell.swift in Sources */,
 				6424F217239589AD004D6B32 /* CalculateController.swift in Sources */,
+				D80569762398DE190053E2B2 /* SelectedVehicleListDataSource.swift in Sources */,
 				6424F21D2395B9D2004D6B32 /* IsCalculatedListController .swift in Sources */,
 				D805696E23988E5B0053E2B2 /* VehicleSelectionCell.swift in Sources */,
 				6424F1E723957D9E004D6B32 /* AppDelegate.swift in Sources */,

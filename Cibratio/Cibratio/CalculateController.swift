@@ -22,7 +22,7 @@ class CalculateController: UIViewController {
         
         calculatedMPG = miValue/galValue
         
-        DataStore.shared.tempCalcMPG = calculatedMPG
+        DataStore.shared.tempCalcMPG = calculatedMPG.rounded()
     }
     
     @IBAction func calcButton(_ sender: UIButton) {

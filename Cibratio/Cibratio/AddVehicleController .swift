@@ -11,10 +11,12 @@ import UIKit
 class AddVehicleController: UIViewController {
     
     
+    
 
     @IBOutlet var makeTextField: UITextField!
     @IBOutlet var modelTextField: UITextField!
     @IBOutlet var yearTextField: UITextField!
+    
     
     
     @IBAction func cancelButton(_ sender: Any) {
@@ -27,12 +29,14 @@ class AddVehicleController: UIViewController {
     
     
     func addVehicle() {
+        var dataStore = DataStore.shared
+        
+        let newEntry = MpgEntry(mpg: 1.1, date: Date())
+        dataStore.entry.append([newEntry])
         
         let newCar = Car(make: makeTextField.text!, model: modelTextField.text!, year: yearTextField.text!, entries: nil)
-        let newEntry = MpgEntry(mpg: nil, date: nil)
+        dataStore.cars.append(newCar)
         
-        DataStore.shared.cars.append(newCar)
-        DataStore.shared.entry.append(newEntry)
         
     }
     

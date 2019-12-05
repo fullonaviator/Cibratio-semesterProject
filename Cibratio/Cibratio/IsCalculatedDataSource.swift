@@ -23,14 +23,15 @@ class IsCalculatedDataSource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "labelsCell") as! LabelsCell
-            cell.avgMPGLabel.text! = "\(dataStore.tempCalcMPG)"
+            cell.avgMPGLabel.text? = "\(dataStore.tempCalcMPG)"
+            cell.epaEstimateCell.text? = "\(30.1)"
             return cell
         }
         else if indexPath.row == 1 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "vehicleSelectionCell") as! VehicleSelectionCell
             cell.self
-//            let cell: UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "vehicleSelectionCell") as! VehicleSelectionCell
+
             
             return cell
         }
@@ -39,8 +40,6 @@ class IsCalculatedDataSource: NSObject, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "buttonsCell") as! ButtonsCell
             cell.backButton((Any).self)
             cell.submitButton((Any).self)
-            
-//            let cell: UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "buttonsCell") as! ButtonsCell
             
             return cell
         }

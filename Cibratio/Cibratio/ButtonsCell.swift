@@ -8,12 +8,23 @@
 
 import UIKit
 
+protocol ButtonCellDelagate {
+    
+    func didTapBackButton()
+    func didTapSubmitButton()
+}
+
 class ButtonsCell: UITableViewCell {
     
+    var delegate: ButtonCellDelagate?
+    
     @IBAction func backButton(_ sender: Any) {
+        delegate?.didTapBackButton()
     }
     
     @IBAction func submitButton(_ sender: Any) {
+        delegate?.didTapSubmitButton()
+        
     }
     
     
