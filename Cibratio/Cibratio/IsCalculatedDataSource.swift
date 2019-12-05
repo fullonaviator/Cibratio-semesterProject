@@ -10,6 +10,8 @@ import UIKit
 
 class IsCalculatedDataSource: NSObject, UITableViewDataSource {
     
+    var dataStore = DataStore.shared
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -20,7 +22,27 @@ class IsCalculatedDataSource: NSObject, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            let cell: UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: <#T##String?#>)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "labelsCell") as! LabelsCell
+            cell.avgMPGLabel.text! = "\(dataStore.tempCalcMPG)"
+            return cell
+        }
+        else if indexPath.row == 1 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "vehicleSelectionCell") as! VehicleSelectionCell
+            cell.self
+//            let cell: UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "vehicleSelectionCell") as! VehicleSelectionCell
+            
+            return cell
+        }
+        else {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "buttonsCell") as! ButtonsCell
+            cell.backButton((Any).self)
+            cell.submitButton((Any).self)
+            
+//            let cell: UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "buttonsCell") as! ButtonsCell
+            
+            return cell
         }
     }
 }
